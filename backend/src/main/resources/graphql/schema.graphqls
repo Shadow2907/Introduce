@@ -1,0 +1,19 @@
+type IntroduceDocument {
+    id: ID
+    title: String
+    description: String
+    tag: String
+    imageId: String
+    url: String
+    status: Status
+}
+
+enum Status {
+    ACTIVE
+    INACTIVE
+}
+
+type Query {
+    introduces: [IntroduceDocument]
+    introduce(id: ID): IntroduceDocument
+}
